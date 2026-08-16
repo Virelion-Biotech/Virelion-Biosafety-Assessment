@@ -9,10 +9,14 @@ A single-page planning aid that suggests a minimum biosafety level (BSL) and rel
 ## Features
 
 - Six-step form: cell type → genetic modification → viral vector → scale → intended use → additional risk factors
-- Suggested containment placard (BSL-2, enhanced BSL-2+, or BSL-3 path when escalators apply)
+- Suggested containment placard (BSL-2, enhanced BSL-2+, or BSL-3 / BSL-4 path when escalators apply)
 - Engineering controls & PPE, waste handling, training, and documentation lists
 - Flagged items when inputs require dedicated IBC review
 - Export summary (`.txt`) and Print / PDF
+
+## Live web app
+
+Open `index.html` in a browser, or use the hosted copy linked from the [Virelion Biotech tools page](https://github.com/Virelion-Biotech).
 
 ## Cell types covered
 
@@ -43,13 +47,7 @@ A single-page planning aid that suggests a minimum biosafety level (BSL) and rel
 - High sharps / injection risk
 - RG3 / high-consequence agent → BSL-3 path
 - RG4 / maximum containment → BSL-4 path (regulatory + BSL-4 facility required)
-- Combinations that force BSL-3 include:
-  - High-titer lentivirus at production scale
-  - High-titer lentivirus + aerosol outside BSC
-  - RCV + production / aerosol / in vivo
-  - BBP-positive material + integrating or RCV vector
-  - NHP + high-titer/RCV/RG3
-  - Oncogenic insert + high-titer/RCV/production scale
+- Combinations that force BSL-3 include high-titer at production scale, RCV + aerosol/in vivo, BBP-positive + integrating vector, and related pairs.
 
 ## Sources (public guidance)
 
@@ -59,29 +57,13 @@ A single-page planning aid that suggests a minimum biosafety level (BSL) and rel
 
 ## Usage
 
-Open `index.html` in a modern browser (no build step, no server required).
-
 ```bash
-# optional local server
 python -m http.server 8080
-# then visit http://localhost:8080
+# visit http://localhost:8080
 ```
 
-Or open the file directly:
-
-```bash
-open index.html   # macOS
-xdg-open index.html  # Linux
-```
-
-## Disclaimer
-
-This tool generates a **general planning reference** only. It is not a clinical, diagnostic, or regulatory product. Confirm all containment decisions with Virelion EHS / IBC before starting work.
+Or open `index.html` directly.
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
-
-## Related
-
-Part of the [Virelion Biotech](https://github.com/Virelion-Biotech) open-source infrastructure for cardiac regenerative research.
