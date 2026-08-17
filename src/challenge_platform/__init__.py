@@ -9,7 +9,6 @@ __all__ = [
     "AuditRecord",
     "ChallengeScenario",
     "EvidenceLevel",
-    "EvidenceLevel",
     "NoveltyResult",
     "PhenotypeVector",
     "RescueResult",
