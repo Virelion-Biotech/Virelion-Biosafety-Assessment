@@ -29,6 +29,7 @@ dev = ["pytest>=7.0"]
 
 [project.scripts]
 virelion-bsa = "biosafety_assessment.cli:main"
+virelion-challenge = "challenge_platform.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Virelion-Biotech/virelion-biosafety-assessment"
