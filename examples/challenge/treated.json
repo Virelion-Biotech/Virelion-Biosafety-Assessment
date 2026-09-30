@@ -1,0 +1,18 @@
+{
+  "basis": "computational",
+  "evidence_level": "synthetic",
+  "evidence_refs": [],
+  "family_id": "challenge-demo",
+  "held_out": true,
+  "notes": "Arbitrary synthetic fixture. Not experimental data, a biological model, or clinical evidence.",
+  "phenotype": {
+    "contractile_impairment": 0.2,
+    "inflammation": 0.2
+  },
+  "provenance": {},
+  "scenario_id": "treated",
+  "schema_version": 1,
+  "temporal_profile": [],
+  "title": "Synthetic demonstration: treated",
+  "uncertainty": 1.0
+}

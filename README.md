@@ -75,6 +75,21 @@ print(result.notes.controls)   # list of engineering-control notes
 
 See `examples/example_usage.py` for a batch-checking example.
 
+## Defensive phenotype analytics
+
+The package also includes `virelion-challenge` for reproducible phenotype
+variation, novelty/recovery scoring, and declared held-out-family benchmarks.
+This is a computational baseline with explicit provenance, not a validated
+biological model or biosafety approval mechanism.
+
+```bash
+virelion-challenge generate --seed 42
+virelion-challenge benchmark examples/challenge/benchmark.json
+```
+
+The bundled examples are synthetic. See the [workflow, JSON formats, audit
+verification, and limitations](docs/defensive-challenge-platform.md).
+
 ## Repo layout
 
 ```
@@ -135,4 +150,4 @@ pytest
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+AGPL-3.0-or-later — see [LICENSE](LICENSE).

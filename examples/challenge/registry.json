@@ -1,0 +1,23 @@
+{
+  "scenarios": [
+    {
+      "basis": "computational",
+      "evidence_level": "synthetic",
+      "evidence_refs": [],
+      "family_id": "reference-demo",
+      "held_out": false,
+      "notes": "Arbitrary synthetic fixture. Not experimental data, a biological model, or clinical evidence.",
+      "phenotype": {
+        "contractile_impairment": 0.1,
+        "inflammation": 0.1
+      },
+      "provenance": {},
+      "scenario_id": "baseline",
+      "schema_version": 1,
+      "temporal_profile": [],
+      "title": "Synthetic demonstration: baseline",
+      "uncertainty": 1.0
+    }
+  ],
+  "schema_version": 1
+}
