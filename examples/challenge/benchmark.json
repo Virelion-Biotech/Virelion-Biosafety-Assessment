@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "abnormal": false,
+      "scenario": {
+        "basis": "computational",
+        "evidence_level": "synthetic",
+        "evidence_refs": [],
+        "family_id": "normal-demo",
+        "held_out": true,
+        "notes": "Arbitrary synthetic fixture. Not experimental data, a biological model, or clinical evidence.",
+        "phenotype": {
+          "contractile_impairment": 0.15,
+          "inflammation": 0.15
+        },
+        "provenance": {},
+        "scenario_id": "heldout-normal",
+        "schema_version": 1,
+        "temporal_profile": [],
+        "title": "Synthetic demonstration: heldout-normal",
+        "uncertainty": 1.0
+      }
+    },
+    {
+      "abnormal": true,
+      "scenario": {
+        "basis": "computational",
+        "evidence_level": "synthetic",
+        "evidence_refs": [],
+        "family_id": "challenge-demo",
+        "held_out": true,
+        "notes": "Arbitrary synthetic fixture. Not experimental data, a biological model, or clinical evidence.",
+        "phenotype": {
+          "contractile_impairment": 0.9,
+          "inflammation": 0.9
+        },
+        "provenance": {},
+        "scenario_id": "challenged",
+        "schema_version": 1,
+        "temporal_profile": [],
+        "title": "Synthetic demonstration: challenged",
+        "uncertainty": 1.0
+      }
+    }
+  ],
+  "references": [
+    {
+      "basis": "computational",
+      "evidence_level": "synthetic",
+      "evidence_refs": [],
+      "family_id": "reference-demo",
+      "held_out": false,
+      "notes": "Arbitrary synthetic fixture. Not experimental data, a biological model, or clinical evidence.",
+      "phenotype": {
+        "contractile_impairment": 0.1,
+        "inflammation": 0.1
+      },
+      "provenance": {},
+      "scenario_id": "baseline",
+      "schema_version": 1,
+      "temporal_profile": [],
+      "title": "Synthetic demonstration: baseline",
+      "uncertainty": 1.0
+    }
+  ],
+  "schema_version": 1
+}

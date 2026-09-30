@@ -41,8 +41,8 @@ def test_phenotype_values_are_bounded() -> None:
 
 def test_challenge_derivation_is_reproducible() -> None:
     reference = make_reference()
-    a = derive_challenge(reference, scenario_id="CH-001", seed=7, magnitude=0.1)
-    b = derive_challenge(reference, scenario_id="CH-001", seed=7, magnitude=0.1)
+    a = derive_challenge(reference, scenario_id="CH-001", seed=7, magnitude=0.1, held_out=True)
+    b = derive_challenge(reference, scenario_id="CH-001", seed=7, magnitude=0.1, held_out=True)
     assert a.phenotype.features == b.phenotype.features
     assert a.held_out is True
     assert a.basis is ScenarioBasis.COMPUTATIONAL
@@ -86,7 +86,7 @@ def test_registry_filters_and_sorts() -> None:
     registry = ScenarioRegistry()
     reference = make_reference()
     registry.add(reference)
-    derived = derive_challenge(reference, scenario_id="CH-002", seed=1, magnitude=0.1)
+    derived = derive_challenge(reference, scenario_id="CH-002", seed=1, magnitude=0.1, held_out=True)
     registry.add(derived)
     held_out = registry.list(held_out=True)
     assert [item.scenario_id for item in held_out] == ["CH-002"]

@@ -45,3 +45,19 @@ class ScenarioRegistry:
 
     def __len__(self) -> int:
         return len(self._items)
+
+    def to_dict(self) -> dict:
+        return {"schema_version": 1, "scenarios": [item.to_dict() for item in self.list()]}
+
+    @classmethod
+    def from_dict(cls, data: object) -> "ScenarioRegistry":
+        if not isinstance(data, dict) or set(data) != {"schema_version", "scenarios"}:
+            raise ValueError("registry requires schema_version and scenarios")
+        if type(data["schema_version"]) is not int or data["schema_version"] != 1:
+            raise ValueError("registry schema_version must be 1")
+        if not isinstance(data["scenarios"], list):
+            raise ValueError("registry scenarios must be an array")
+        registry = cls()
+        for item in data["scenarios"]:
+            registry.add(ChallengeScenario.from_dict(item))
+        return registry

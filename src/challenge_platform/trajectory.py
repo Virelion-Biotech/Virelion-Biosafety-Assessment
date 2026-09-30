@@ -27,7 +27,7 @@ def summarize_trajectory(values: tuple[float, ...]) -> tuple[float, float, float
 def resample_trajectory(values: tuple[float, ...], points: int) -> tuple[TrajectoryPoint, ...]:
     """Linearly resample a normalized trajectory to a fixed number of points."""
     validate_trajectory(values)
-    if points < 1:
+    if type(points) is not int or points < 1:
         raise ValueError("points must be >= 1")
     if points == 1:
         return (TrajectoryPoint(0, values[0]),)
