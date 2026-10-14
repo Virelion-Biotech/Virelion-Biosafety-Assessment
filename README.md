@@ -6,6 +6,21 @@ A six-step planning aid that suggests a minimum biosafety level and related engi
 
 > **Not a substitute for formal review.** Final BSL determination is an institutional decision. This tool does not replace protocol registration or sign-off by an Institutional Biosafety Committee (IBC) or Biosafety Officer.
 
+
+<!-- VALIDATION_PRODUCT_STATUS:BEGIN -->
+## Validation and product completion status
+
+**Reviewed 2026-10-14; implementation base `ec4a51805b47`.** **Status: Rule-based planning aid; institutional decision validation required.** This is an evidence-backed scope assessment, not a percentage-complete estimate or a declaration that the product is finished.
+
+| Area | Current evidence / remaining gate |
+|---|---|
+| Software / operational checks | Automated test sources and CI definitions are present; this documentation audit does not report a new algorithm/data-validation run. |
+| Scientific or domain evidence | The package encodes assessment heuristics and public-guidance references. It does not replace institutional biosafety determination or demonstrate that its recommendations fit every protocol. |
+| Remaining for the declared product scope | Obtain qualified expert review of rule coverage/conflicts and representative test cases; maintain versioned primary guidance and assumptions; qualify input/UI/accessibility/audit behavior and explicit escalation; retain institution-owned final decision and sign-off. |
+
+Evidence and limits: [repository report](README.md). The [organization status index](https://github.com/Virelion-Biotech/Virelion-HeartTwin/blob/main/docs/STACK_VALIDATION_STATUS.md) separates software, numerical, data-readiness and empirical qualification. Code/schema execution or a completed download is not a substitute for endpoint-specific validation.
+<!-- VALIDATION_PRODUCT_STATUS:END -->
+
 ## Why a Python package instead of the web app
 
 This started as a single `index.html` file. This repo re-implements the same assessment logic as a small, tested Python library + CLI so it can be:
